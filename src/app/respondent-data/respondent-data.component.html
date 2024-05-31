@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="row">
+    <!-- Sidebar -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <div class="col">
+      <div style="background-color: transparent; border: none;" class="sidebar">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/survey">Survey</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/respondent-data">Respondent</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/analytics">Analytics</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/student-list">Student List</a>
+        <div class="create-survey">
+          <a type="button" class="btn1 button-option" routerLinkActive="active" (click)="downloadExcel()">Download Table</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="col" style="position: relative; padding-bottom: 4rem; padding-left: 9rem;">
+
+      <div class="card" style="margin-top: 5rem; background-color: #a0deff17;outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)">
+        <div class="chart-container">
+          <div id="barChart1" class="chart" style="padding-right: 14rem;"></div>
+          <div id="pieChart1" class="chart"></div>
+        </div>
+        </div>
+      <div class="card" style="margin-top: 0.5rem; background-color: #a0deff17;outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)">
+        <div style="background-color: #a0deff17; padding-top: 10px; padding-bottom:0px" class="card-header">
+          <p style="color: #EE7214; font-size: 40px;" class="text-center">Respondent Data</p>
+        </div>
+        <div class="container" >
+
+          <input type="text" class="form-control mt-3" placeholder="Search by Name..." [(ngModel)]="searchSurvey">
+          <!-- Dropdown for selecting the course -->
+          <select class="form-control " [(ngModel)]="selectedCourse">
+            <option value="ALL CATEGORIES">ALL CATEGORIES</option>
+            <option value="BSCS">BSCS</option>
+            <option value="BSIT">BSIT</option>
+            <option value="BSEMC">BSEMC</option>
+            <option value="ACT">ACT</option>
+          </select>
+          <select class="form-control mb-3" [(ngModel)]="selectedBatchYr">
+            <option value="ALL YEARS">ALL YEARS</option>
+            <option value="2022">2019</option>
+            <option value="2023">2020</option>
+            <option value="2024">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+          </select>
+          <div class="table-responsive"> 
+            <table class="table">
+              <thead>     
+                <tr>
+                  <th scope="col">ID</th> <!-- Added column for ID -->
+                  <th scope="col">Batch Yr.</th>
+                  <th scope="col">Program</th>
+                  <th scope="col">Student Name</th>
+                  <th scope="col">Email</th> 
+                  <th scope="col">Contact</th>
+                  <th scope="col">Work Status</th>
+                  <th scope="col">Occupation</th>  
+                  <th scope="col">Actions</th> <!-- Column for actions like delete -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let StudentItem of filteredStudents">
+                  <td>{{ StudentItem.id }}</td> <!-- Display the ID -->
+                  <td>{{ StudentItem.batchYr }}</td>
+                  <td>{{ StudentItem.program }}</td>
+                  <td>{{ StudentItem.name }}</td>
+                  <td>{{ StudentItem.email }}</td>
+                  <td>{{ StudentItem.contact_Num }}</td>
+                  <td>{{ StudentItem.work_Status }}</td>
+                  <td>{{ StudentItem.occupation }}</td>
+                  <td>
+                    <button type="button" class="btn btn-danger" (click)="setDelete(StudentItem)">Delete</button>
+                  </td>
+                </tr>          
+              </tbody>
+            </table>
+          </div>
+          <div class="chart-container2">
+            <div class="chart-bar2 employed" [style.height]="employedCount + 'rem'">Employed: {{ employedCount }}</div>
+            <div class="chart-bar2 unemployed" [style.height]="unemployedCount + 'rem'">Unemployed: {{ unemployedCount }}</div>
+            <div class="chart-bar2 seeking-employment" [style.height]="seekingEmploymentCount + 'rem'">Seeking Employment: {{ seekingEmploymentCount }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+

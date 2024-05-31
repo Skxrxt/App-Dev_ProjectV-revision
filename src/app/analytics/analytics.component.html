@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <div class="col-lg-3 col-md-4">
+      <div style="background-color: transparent; border: none;" class="sidebar">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/survey">Survey</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/respondent-data">Respondent</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/analytics">Analytics</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/student-list">Student List</a>
+        <div class="create-survey">
+          <a type="button" class="btn1 button-option" routerLinkActive="active" routerLink="/surveyresponse">Get Survey Link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col" style="position: relative; padding-bottom: 4rem; padding-left: 9rem;">
+
+  
+    <div class="card" style="margin-top: 5rem; background-color: #a0deff17;outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)">
+      <div style="background-color: #a0deff17; padding-top: 10px; padding-bottom:0px" class="card-header">
+        <p style="color: #EE7214; font-size: 40px;" class="text-center">Respondent Data</p>
+      </div>
+    <div class="chart-container">
+ 
+    <div class="col-lg-9 col-md-8">
+      <h2 style="padding-top: 5rem; color: rgb(190, 107, 24);">PIE CHART</h2>
+      <div class="chart-container grid-container1">
+        <div id="pieChart1" class="chart1"></div>
+        <div id="pieChart2" class="chart1"></div>
+        <div id="pieChart3" class="chart1"></div>
+        <div id="pieChart4" class="chart1"></div>
+        <div id="pieChart5" class="chart1"></div>
+        <div id="pieChart6" class="chart1"></div>
+        <div id="pieChart7" class="chart1"></div>
+        <div id="pieChart8" class="chart1"></div>
+        
+        <!-- Add more pie charts here if needed -->
+      </div>
+      <h2 style="padding-top: 5rem; color: rgb(190, 107, 24)">BAR CHART</h2>
+      <div class="chart-container">
+        <div id="barChart1" class="chart"></div>
+        <div id="barChart2" class="chart"></div>
+        <!-- <div id="barChart3" class="chart"></div> -->
+      </div>
+      <h2 style="padding-top: 5rem; color: rgb(190, 107, 24)">LINE CHART</h2>
+      <div class="chart-container" style="padding-bottom: 2rem">
+        <div id="lineChart1" class="chart"></div>
+        <div id="lineChart2" class="chart"></div>
+        <!-- <div id="lineChart3" class="chart"></div> -->
+      </div>
+    </div>
+  </div>
+</div>
+

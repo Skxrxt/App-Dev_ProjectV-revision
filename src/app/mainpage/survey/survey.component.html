@@ -1,0 +1,133 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+    <div class="col-lg-3 col-md-4">
+      <div style="background-color: transparent; border: none;" class="sidebar">
+        <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/survey">Survey</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/respondent-data">Respondent</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/analytics">Analytics</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/student-list">Student List</a>
+        <div class="create-survey">
+          <a type="button" class="btn1 button-option" routerLinkActive="active" routerLink="/surveyresponse">Get Survey Link</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+   <div style="position: relative; right: 140px;" class="col-lg-9 col-md-8">
+      <div class="card pb-3" style="width: 100%; margin-top: 8rem; background-color: #a0deff17; outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);">
+        <!-- Remaining content as it is -->
+        <div style="background-color: #a0deff17; padding-top: 15px; padding-bottom: 0px" class="card-header">
+          <p style="color:#EE7214; font-size: 40px;" class="text-center">Alumni Study Tracer</p>
+        </div>
+        
+        
+      </div>
+    
+      <div style="background-color: #a0deff17; outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; margin-top: 10px; padding-top:10px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)"class="card mt-3">
+        <div class="card-body">
+          
+            <div style=" padding-bottom: 0px" class="card-header">
+              <p style="color:#EE7214; font-size: 30px;" class="text-center">PROFILE</p>
+            </div>
+                <div class="mb-3">
+                    <label style="color: #025464;" class="textmb-1" for="username">Name:</label>
+                    <input type="text" class="form-control mb-3" name="username" id="respondentName" [(ngModel)]="respondentName" placeholder="LN, FN MI">
+                    
+                    <label style="color: #025464;" class="text mb-1" for="username">Email:</label>
+                    <input type="text" class="form-control" name="email" id="respondentEmail" [(ngModel)]="respondentEmail" placeholder="example@gmail.com">
+
+                    <label style="color: #025464;" class="text mb-1" for="username">Home Address:</label>
+                    <input type="text" class="form-control" name="email" id="respondentAddress" [(ngModel)]="respondentAddress" >
+
+
+                    <label style="color: #025464;" class="text mb-1" for="username">Contact No.</label>
+                    <input type="text" class="form-control" name="contact" id="respondentContact" [(ngModel)]="respondentContact" placeholder="0000-000-0000">
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Civil Status:</label>
+                    <select class="form-control mb-3" id="respondentCivil" [(ngModel)]="respondentCivil">
+                        <option value="Single">Single</option>
+                        <option value="Married">Married</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Sex:</label>
+                    <select class="form-control mb-3" id="respondentSex" [(ngModel)]="respondentSex">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Graduated Course:</label>
+                    <select class="form-control mb-3" id="respondentCourse" [(ngModel)]="respondentCourse">
+                        <option value="BSCS">BSCS</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="BSEMC">BSEMC</option>
+                        <option value="ACT">ACT</option>
+                    </select>
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Year Graduated</label>
+                          <select class="form-control mb-3" id="respondentYrgrad" [(ngModel)]="respondentYrgrad">
+                              <option value="2019">2019</option>
+                              <option value="2020">2020</option>
+                              <option value="2021">2021</option>
+                              <option value="2022">2022</option>
+                              <option value="2023">2023</option>
+                              <option value="2024">2024</option>
+                              <option value="2025">2025</option>
+                              <option value="2026">2026</option>
+                          </select>
+                   
+                </div>
+        </div>
+      </div>
+      <div style="background-color: #a0deff17; outline: 6px solid rgba(255, 255, 255, 0); border: none; border-radius: 20px; margin-top: 10px;margin-bottom: 8rem; padding-top:10px; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2)"class="card mt-3">
+        <div class="card-body">
+          
+            <div style=" padding-bottom: 0px" class="card-header">
+              <p style="color:#EE7214; font-size: 30px;" class="text-center">EMPLOYMENT DATA</p>
+            </div>
+                <div class="mb-3">
+                    
+                    <label style="color: #025464;" class="textmb-1" for="username">Work Status:</label>
+                    <select class="form-control mb-3" id="respondentStatus" [(ngModel)]="respondentStatus">
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Seeking Employment">Seeking Employment</option>
+                    </select>
+
+                    <label style="color: #025464;" class="text mb-1" for="username">Occupation:</label>
+                    <input type="text" class="form-control" name="email" id="respondentOccupation" [(ngModel)]="respondentOccupation" placeholder="If none type N/A">
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Place of Work (n/a if Unemployed)</label>
+                    <select class="form-control mb-3" id="respondentWorkplace" [(ngModel)]="respondentWorkplace">
+                        <option value="Local">Local</option>
+                        <option value="Abroad">Abroad</option>
+                        <option value="n/a">n/a</option>
+                    </select>
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Income Range: (n/a if Unemployed)</label>
+                    <select class="form-control mb-3" id="respondentCourse" [(ngModel)]="respondentIncome">
+                        <option value="10,001 – 20,000">10,001 – 20,000</option>
+                        <option value="20,001-30,000">20,001-30,000</option>
+                        <option value="30,001 – 40,000">30,001 – 40,000</option>
+                        <option value="40,001 – above">40,001 – above</option>
+                        <option value="n/a">n/a</option>
+                    </select>
+
+                    <label style="color: #025464;" class="textmb-1" for="username">Was the curriculum you had in college relevant to your first job? (n/a if Unemployed)</label>
+                    <select class="form-control mb-3" id="respondentWorkrelevant" [(ngModel)]="respondentWorkrelevant">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="n/a">n/a</option>
+                    </select>
+                    
+                </div>
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+</div>

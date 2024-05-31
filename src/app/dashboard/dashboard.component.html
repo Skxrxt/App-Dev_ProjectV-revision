@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle">
+        <div class="col-lg-3 col-md-4">
+            <div style="background-color: transparent; border: none;" class="sidebar">
+                <a class="nav-link" routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
+                <a class="nav-link" routerLinkActive="active" routerLink="/survey">Survey</a>
+                <a class="nav-link" routerLinkActive="active" routerLink="/respondent-data">Respondent</a>
+                <a class="nav-link" routerLinkActive="active" routerLink="/analytics">Analytics</a>
+                <a class="nav-link" routerLinkActive="active" routerLink="/student-list">Student List</a>
+                <div class="create-survey">
+                    <a type="button" class="btn1 button-option" routerLinkActive="active" routerLink="/surveyresponse">Get Survey Link</a>
+                </div>
+            </div>
+        </div>
+<!-- Main Dashboard Content -->
+<div class="col-lg-9 col-md-8" style="padding-top: 5rem;">
+  <div class="dashboard-header">
+      <h2>Social Media Dashboard</h2>
+      <h4>Noveta Inc.</h4>
+      <div class="date-range">
+          <input type="text" placeholder="2019-01-01 to 2019-01-31">
+      </div>
+      <button class="actions-button">Actions</button>
+  </div>
+  <div class="dashboard-metrics">
+      <div class="metric">
+          <h3>1200</h3>
+          <p>Facebook: Page Likes</p>
+          <span class="metric-change positive">+15%</span>
+      </div>
+      <div class="metric">
+          <h3>175</h3>
+          <p>Instagram: Followers Count</p>
+          <span class="metric-change positive">+12%</span>
+      </div>
+      <div class="metric">
+          <h3>65</h3>
+          <p>Twitter: Total tweets</p>
+          <span class="metric-change positive">+3%</span>
+      </div>
+      <div class="metric">
+          <h3>1127</h3>
+          <p>LinkedIn: Followers</p>
+          <span class="metric-change positive">+10%</span>
+      </div>
+  </div>
+  <div class="dashboard-charts">
+      <div class="chart">
+          <h4>Facebook: Page Impressions By Age</h4>
+          <div class="chart-container" id="facebookAgeChart"></div>
+      </div>
+      <div class="chart">
+          <h4>Instagram: Profile Views</h4>
+          <div class="chart-container" id="instagramProfileViewsChart"></div>
+      </div>
+      <div class="chart">
+          <h4>Twitter: Tweet Analytics</h4>
+          <div class="chart-container" id="twitterAnalyticsChart"></div>
+      </div>
+      <div class="chart">
+          <h4>Facebook: Fans By Gender</h4>
+          <div class="chart-container" id="facebookGenderChart"></div>
+      </div>
+      <div class="chart">
+          <h4>Twitter: Top Cities By Sessions</h4>
+          <div class="chart-container" id="twitterCitiesChart"></div>
+      </div>
+      <div class="chart">
+          <h4>Instagram: Fans By Gender</h4>
+          <div class="chart-container" id="instagramGenderChart"></div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
