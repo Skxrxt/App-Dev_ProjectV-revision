@@ -16,10 +16,10 @@ server.use(cors())
 
 const db = mysql.createConnection({
 
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "dbgcschool"
+  host: "srv1321.hstgr.io",
+  user: "u438242536_root",
+  password: "Arceo@2004",
+  database: "u438242536_dbgcschool"
 });
 
 db.connect(function (error) {
